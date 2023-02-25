@@ -35,4 +35,10 @@ public class Card : MonoBehaviour
     {
         
     }
+
+    //attack another card
+    public void Attack(Card target)
+    {
+        
+    }
 }
