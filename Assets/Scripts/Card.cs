@@ -8,18 +8,26 @@ public class Card : MonoBehaviour
     public string cardName;
     public int cost;
     public string effectDetails;
-    public int hitPoints;
+    public int health;
     public int power;
-    public Sprite cardArt;
+    public int cardArtRef;
+    public CardEffect cardEffect;
+    
     // Start is called before the first frame update
     void Start()
+    {
+        
+    }
+
+    public void GetCardData(CardData data)
     {
         cardName = data.cardName;
         cost = data.cost;
         effectDetails = data.effectDetails;
-        //hitPoints = data.hitPoints;
-        //power = data.power;
-        cardArt = data.cardArt;
+        health = data.health;
+        power = data.power;
+        cardArtRef = data.cardArt;
+        cardEffect = data.cardEffect;
     }
 
     // Update is called once per frame
