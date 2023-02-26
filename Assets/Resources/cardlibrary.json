@@ -1,0 +1,8 @@
+{
+    "cardLibrary":
+    [
+        {
+			"cardID":0, "artID":0, "cardName":"Marine", "cost":100, "power":10, "health":20, "effectID":0, "effectDetails":""
+		}
+    ]
+}

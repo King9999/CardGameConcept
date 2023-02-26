@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Card : MonoBehaviour
+public class CardObject : MonoBehaviour
 {
     public CardData data;
     public string cardName;
@@ -37,8 +37,15 @@ public class Card : MonoBehaviour
     }
 
     //attack another card
-    public void Attack(Card target)
+    public void Attack(CardObject target)
     {
-        
+        target.health -= power;
+        if (target.health <= 0)
+            target.DestroyCard();
+    }
+
+    public void DestroyCard()
+    {
+        gameObject.SetActive(false);
     }
 }
