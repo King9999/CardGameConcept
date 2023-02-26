@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//base class for all card abilities.
 public abstract class CardEffect : ScriptableObject
 {
    public virtual void Activate(Card target){}

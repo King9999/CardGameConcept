@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fab4bfe03f20b2e438543355bb3cd258, type: 3}
   m_Name: card_marine
   m_EditorClassIdentifier: 
-  cardName: 
-  cost: 0
+  cardName: Marine
+  cost: 100
   effectDetails: 
-  power: 0
-  health: 0
+  power: 10
+  health: 20
   cardArt: 0
   cardEffect: {fileID: 0}
