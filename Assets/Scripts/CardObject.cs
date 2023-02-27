@@ -12,6 +12,7 @@ public class CardObject : MonoBehaviour
     public int power;
     public int cardArtRef;
     public CardEffect cardEffect;
+    public CardAbility ability;
     
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,7 @@ public class CardObject : MonoBehaviour
         power = data.power;
         cardArtRef = data.cardArt;
         cardEffect = data.cardEffect;
+        ability = data.ability;
     }
 
     // Update is called once per frame
@@ -42,10 +44,44 @@ public class CardObject : MonoBehaviour
         target.health -= power;
         if (target.health <= 0)
             target.DestroyCard();
+        
+        //check for an effect to trigger
+        if (cardEffect != null)
+        {
+            TriggerEffect(cardEffect);
+        }
+    }
+
+    //used in special cases where I need to specify the damage
+    public void Attack(CardObject target, int damage)
+    {
+        target.health -= damage;
+        if (target.health <= 0)
+            target.DestroyCard();
+
+        //check for an effect to trigger
+        if (cardEffect != null)
+        {
+            TriggerEffect(cardEffect);
+        }
     }
 
     public void DestroyCard()
     {
         gameObject.SetActive(false);
+    }
+
+    public void TriggerEffect(CardEffect effect, CardObject user = null, CardObject target = null, CardObject[] targets = null)
+    {
+        switch(effect.targetType)
+        {
+            case CardEffect.TargetType.OneCard:
+                effect.Activate(user, target, targets);
+                break;
+
+            case CardEffect.TargetType.AllEnemyCards:
+                effect.Activate(user, targets);
+                break;
+        }
     }
 }

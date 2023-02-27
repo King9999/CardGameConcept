@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-namespace CardGame.GenericClasses
+namespace CardGame.Classes
 {
     /*** Card Classes for JSON ***/
     [Serializable]
@@ -15,6 +15,7 @@ namespace CardGame.GenericClasses
         public int power;
         public int health;
         public int effectID;
+        public int abilityID;
         public string cardName;
         public string effectDetails;
     }

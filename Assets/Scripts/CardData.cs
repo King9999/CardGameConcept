@@ -12,7 +12,8 @@ public abstract class CardData : ScriptableObject
     public int power;
     public int health;
     public int cardArt;                 //reference to card sprite
-    public CardEffect cardEffect;
+    public CardEffect cardEffect;       //can be null
+    public CardAbility ability;         //can be null
 
     //THE CODE BELOW COULD BE USED FOR A FUTURE GAME. I WANT TO MAKE A BASIC GAME FOR NOW
 
