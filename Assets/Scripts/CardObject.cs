@@ -8,6 +8,7 @@ public class CardObject : MonoBehaviour
     public string cardName;
     public int cost;
     public string effectDetails;
+    public string abilityDetails;
     public int health;
     public int power;
     public int cardArtRef;
@@ -24,12 +25,13 @@ public class CardObject : MonoBehaviour
     {
         cardName = data.cardName;
         cost = data.cost;
-        effectDetails = data.effectDetails;
+        effectDetails = data.cardEffect.effectDetails;
         health = data.health;
         power = data.power;
         cardArtRef = data.cardArt;
         cardEffect = data.cardEffect;
         ability = data.ability;
+        abilityDetails = data.ability.abilityDetails;
     }
 
     // Update is called once per frame

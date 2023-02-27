@@ -25,4 +25,33 @@ namespace CardGame.Classes
     {
         public Card[] cardLibrary;
     }
+
+    [Serializable]
+    public class EffectsLibrary
+    {
+        public Effect[] cardEffectLibrary;
+    }
+
+    [Serializable]
+    public class AbilitiesLibrary
+    {
+        public Ability[] cardAbilityLibrary;
+    }
+
+    [Serializable]
+    public class Effect
+    {
+        public int effectID;
+        public string effectName;
+        public string effectDetails;
+        public CardEffect.TargetType targetType;          //this needs to be cast when generating effets
+    }
+
+    [Serializable]
+    public class Ability
+    {
+        public int abilityID;
+        public string abilityName;
+        public string abilityDetails;
+    }
 }

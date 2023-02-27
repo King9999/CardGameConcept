@@ -6,9 +6,10 @@ using UnityEngine;
 public abstract class CardEffect : ScriptableObject
 {
    public int effectID;
-   [TextArea]public string effectDetails;
+   public string effectName;
    public enum TargetType {OneCard, AllEnemyCards, AllAlliedCards, AllCards}
    public TargetType targetType;
+   [TextArea]public string effectDetails;
    public virtual void Activate(CardObject user, CardObject target){}
    public virtual void Activate(CardObject user, CardObject[] targets){}
    public virtual void Activate(CardObject user, CardObject target, CardObject[] targets = null){} //used for cases where more than 1 card is targeted

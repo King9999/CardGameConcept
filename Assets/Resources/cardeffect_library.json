@@ -1,0 +1,9 @@
+{
+    "cardEffectLibrary":
+    [
+        {
+            "effectID":0, "effectName":"Grenade", "targetType":0, 
+            "effectDetails":"When Grenadier attacks an enemy, a random enemy takes half damage."
+        }
+    ]
+}

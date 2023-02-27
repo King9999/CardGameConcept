@@ -2,11 +2,10 @@
     "cardLibrary":
     [
         {
-			"cardID":0, "artID":0, "cardName":"Marine", "cost":100, "power":10, "health":20, "effectID":0, "abilityID":0, "effectDetails":""
+			"cardID":0, "artID":0, "cardName":"Marine", "cost":100, "power":10, "health":20, "effectID":-1, "abilityID":-1
 		},
         {
-			"cardID":1, "artID":1, "cardName":"Grenadier", "cost":200, "power":20, "health":20, "effectID":1, "abilityID":0,
-            "effectDetails":"When Grenadier attacks an enemy, a random enemy takes half damage."
+			"cardID":1, "artID":1, "cardName":"Grenadier", "cost":200, "power":20, "health":20, "effectID":0, "abilityID":-1
 		}
     ]
 }

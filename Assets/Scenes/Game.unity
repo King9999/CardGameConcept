@@ -420,6 +420,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: effectsFile
+      value: 
+      objectReference: {fileID: 4900000, guid: 8eff20b11124da549b55926e270b014b, type: 3}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardDatabase.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardDatabase.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 33320535047e9a94eba8fb505af39e8e, type: 2}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: effectsDatabase.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: effectsDatabase.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1208e3b28d782624c97c10dc08e99fee, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
 --- !u!1001 &6371950020424805570

@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //all information about a card is acquired from JSON
-public abstract class CardData : ScriptableObject
+public class CardData : ScriptableObject
 {
+    public int cardID;
     public string cardName;
     public int cost;
-    [TextArea]public string effectDetails;
     public int power;
     public int health;
     public int cardArt;                 //reference to card sprite
