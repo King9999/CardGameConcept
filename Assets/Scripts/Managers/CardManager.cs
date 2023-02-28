@@ -45,6 +45,8 @@ public class CardManager : MonoBehaviour
            
         }
 
+        /******Populate abilities*******/
+
         /*******Card generation*******/
         for (int i = 0; i < cardsJson.cardLibrary.Length; i++)
         {

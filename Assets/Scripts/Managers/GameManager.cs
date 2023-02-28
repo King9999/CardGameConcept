@@ -6,7 +6,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    public UIManager uim {get; private set;}
+    public CardManager cm {get; private set;}
     void Awake()
     {
         if (instance != null && instance != this)
@@ -16,13 +17,14 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
-        UIManager uim = GetComponentInChildren<UIManager>();
-        CardManager cm = GetComponentInChildren<CardManager>(); 
+        uim = GetComponentInChildren<UIManager>();
+        cm = GetComponentInChildren<CardManager>(); 
     }
     // Start is called before the first frame update
     void Start()
     {
-    
+        //UI setup
+        uim.ToggleCardWindow(false);
     }
 
     // Update is called once per frame

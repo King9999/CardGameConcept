@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.EventSystems;
 
-public class CardObject : MonoBehaviour
+public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public CardData data;
+    //public CardData data;
     public string cardName;
     public int cost;
     public string effectDetails;
@@ -14,6 +16,11 @@ public class CardObject : MonoBehaviour
     public int cardArtRef;
     public CardEffect cardEffect;
     public CardAbility ability;
+    [Header("---Text Meshes---")]
+    public TextMeshPro cardNameText;
+    public TextMeshPro costText;
+    public TextMeshPro healthText;
+    public TextMeshPro powerText;
     
     // Start is called before the first frame update
     void Start()
@@ -66,6 +73,26 @@ public class CardObject : MonoBehaviour
         {
             TriggerEffect(cardEffect);
         }
+    }
+
+    //shows card details window
+    public void OnPointerEnter(PointerEventData data)
+    {
+        ShowCardDetails(ability.abilityDetails, cardEffect.effectDetails);
+    }
+
+    public void OnPointerExit(PointerEventData data)
+    {
+        GameManager gm = GameManager.instance;
+        gm.uim.ToggleCardWindow(false);
+    }
+
+    void ShowCardDetails(string ability, string effects)
+    {
+        GameManager gm = GameManager.instance;
+        gm.uim.abilityText.text = ability;
+        gm.uim.effectText.text = effects;
+        gm.uim.ToggleCardWindow(true);
     }
 
     public void DestroyCard()

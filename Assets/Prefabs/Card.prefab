@@ -519,6 +519,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6371950020747420229}
+  - component: {fileID: 2333033754646440201}
   - component: {fileID: 6371950020747420228}
   - component: {fileID: 6371950020747420231}
   m_Layer: 0
@@ -546,6 +547,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2333033754646440201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371950020747420225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74888d59b9e01724ab44a3f6f908dfbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardName: 
+  cost: 0
+  effectDetails: 
+  abilityDetails: 
+  health: 0
+  power: 0
+  cardArtRef: 0
+  cardEffect: {fileID: 0}
+  ability: {fileID: 0}
+  cardNameText: {fileID: 1166834245792650496}
+  costText: {fileID: 4378990818995326609}
+  effectText: {fileID: 0}
+  abilityText: {fileID: 0}
+  healthText: {fileID: 8084608562430084902}
+  powerText: {fileID: 3279760976649884572}
 --- !u!33 &6371950020747420228
 MeshFilter:
   m_ObjectHideFlags: 0
