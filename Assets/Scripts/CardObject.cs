@@ -25,7 +25,12 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager gm = GameManager.instance;
+        MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
+        Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
+        r.material.SetTexture("_MainTex2", gm.cm.cardFaceTextures[1].faceTexture);
+        Debug.Log(r.material.GetTexture("_MainTex2").name);
+        Resources.UnloadUnusedAssets();     //must call this when dealing with assets in resources folder.
     }
 
     public void GetCardData(CardData data)

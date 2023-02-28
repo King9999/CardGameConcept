@@ -442,6 +442,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.data[0]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1e0705afa7543b74a97067ca87a9d24b, type: 3}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.data[1]
+      value: 
+      objectReference: {fileID: 2800000, guid: 1a968cfb6c2140b42b2995910647d525, type: 3}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.data[1].artID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.data[0].faceTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1a968cfb6c2140b42b2995910647d525, type: 3}
+    - target: {fileID: 6032751444700236075, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
+      propertyPath: cardFaceTextures.Array.data[1].faceTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 1e0705afa7543b74a97067ca87a9d24b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc879e6c9aadc242920cfbdb5fc3abd, type: 3}
 --- !u!1001 &6371950020424805570
@@ -451,6 +475,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2333033754646440201, guid: bf8fb72522331c44aab02bdf07a7764d, type: 3}
+      propertyPath: cardFace
+      value: 
+      objectReference: {fileID: 2100000, guid: f20f2b68d13b0d24eb9e2f75dead2c29, type: 2}
     - target: {fileID: 2333033754646440201, guid: bf8fb72522331c44aab02bdf07a7764d, type: 3}
       propertyPath: effectText
       value: 

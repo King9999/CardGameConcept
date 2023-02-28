@@ -570,10 +570,9 @@ MonoBehaviour:
   ability: {fileID: 0}
   cardNameText: {fileID: 1166834245792650496}
   costText: {fileID: 4378990818995326609}
-  effectText: {fileID: 0}
-  abilityText: {fileID: 0}
   healthText: {fileID: 8084608562430084902}
   powerText: {fileID: 3279760976649884572}
+  cardFace: {fileID: 2100000, guid: f20f2b68d13b0d24eb9e2f75dead2c29, type: 2}
 --- !u!33 &6371950020747420228
 MeshFilter:
   m_ObjectHideFlags: 0

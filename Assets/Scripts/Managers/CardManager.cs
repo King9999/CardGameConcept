@@ -17,6 +17,14 @@ public class CardManager : MonoBehaviour
     public CardEffect[] effectsDatabase;
     public CardAbility[] abilitiesDatabase;
 
+    [System.Serializable]
+    public struct CardFace
+    {
+        public Texture faceTexture;
+        public int artID;
+    }
+    public CardFace[] cardFaceTextures;
+
     // Start is called before the first frame update
     void Start()
     {
