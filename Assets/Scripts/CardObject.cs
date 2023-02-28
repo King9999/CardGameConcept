@@ -26,24 +26,26 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     void Start()
     {
         GameManager gm = GameManager.instance;
-        MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
+
+        GetCardData(gm.cm.cardDatabase[1]);
+        /*MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
         Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
         r.material.SetTexture("_MainTex2", gm.cm.cardFaceTextures[1].faceTexture);
         Debug.Log(r.material.GetTexture("_MainTex2").name);
-        Resources.UnloadUnusedAssets();     //must call this when dealing with assets in resources folder.
+        Resources.UnloadUnusedAssets(); */    //must call this when dealing with assets in resources folder.
     }
 
     public void GetCardData(CardData data)
     {
         cardName = data.cardName;
         cost = data.cost;
-        effectDetails = data.cardEffect.effectDetails;
+        effectDetails = data.cardEffect == null ? "<NONE>" : data.cardEffect.effectDetails;
         health = data.health;
         power = data.power;
         cardArtRef = data.cardArt;
         cardEffect = data.cardEffect;
         ability = data.ability;
-        abilityDetails = data.ability.abilityDetails;
+        abilityDetails = data.ability == null ? "<NONE>" : data.ability.abilityDetails;
     }
 
     // Update is called once per frame
@@ -82,8 +84,13 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     //shows card details window
     public void OnPointerEnter(PointerEventData data)
-    {
-        ShowCardDetails(ability.abilityDetails, cardEffect.effectDetails);
+    {   
+        /*if (ability == null && cardEffect != null)    
+            ShowCardDetails("", cardEffect.effectDetails);
+        else if (ability != null && cardEffect == null)
+            ShowCardDetails(abi, cardEffect.effectDetails);*/
+        
+        ShowCardDetails(abilityDetails, effectDetails);
     }
 
     public void OnPointerExit(PointerEventData data)
