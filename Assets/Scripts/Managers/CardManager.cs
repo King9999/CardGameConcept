@@ -138,6 +138,8 @@ public class CardManager : MonoBehaviour
             card.cardName = cardsJson.cardLibrary[i].cardName;
             card.cost = cardsJson.cardLibrary[i].cost;
             card.cardArt = cardsJson.cardLibrary[i].artID;
+            card.effectID = cardsJson.cardLibrary[i].effectID;
+            card.abilityID = cardsJson.cardLibrary[i].abilityID;
             card.power = cardsJson.cardLibrary[i].power;
             card.health = cardsJson.cardLibrary[i].health;
 

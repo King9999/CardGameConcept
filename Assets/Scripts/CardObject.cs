@@ -25,14 +25,14 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     // Start is called before the first frame update
     void Start()
     {
-        GameManager gm = GameManager.instance;
+       // GameManager gm = GameManager.instance;
 
-        GetCardData(gm.cm.cardDatabase[1]);
+        //GetCardData(gm.cm.cardDatabase[0]);
         /*MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
         Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
         r.material.SetTexture("_MainTex2", gm.cm.cardFaceTextures[1].faceTexture);
         Debug.Log(r.material.GetTexture("_MainTex2").name);
-        Resources.UnloadUnusedAssets(); */    //must call this when dealing with assets in resources folder.
+        Resources.UnloadUnusedAssets(); */  //must call this when dealing with assets in resources folder.
     }
 
     public void GetCardData(CardData data)
@@ -46,6 +46,20 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         cardEffect = data.cardEffect;
         ability = data.ability;
         abilityDetails = data.ability == null ? "<NONE>" : data.ability.abilityDetails;
+
+        //update card text
+        cardNameText.text = cardName;
+        costText.text = cost.ToString();
+        healthText.text = health.ToString();
+        powerText.text = power.ToString();
+
+        //update card art
+        GameManager gm = GameManager.instance;
+        MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
+        Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
+        r.material.SetTexture("_MainTex2", gm.cm.cardFaceTextures[cardArtRef].faceTexture);
+        Debug.Log(r.material.GetTexture("_MainTex2").name);
+        Resources.UnloadUnusedAssets();
     }
 
     // Update is called once per frame

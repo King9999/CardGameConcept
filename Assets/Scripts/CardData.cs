@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //all information about a card is acquired from JSON
+[CreateAssetMenu(menuName = "Card/Unit", fileName = "card_")]
 public class CardData : ScriptableObject
 {
     public int cardID;
@@ -12,6 +13,8 @@ public class CardData : ScriptableObject
     public int power;
     public int health;
     public int cardArt;                 //reference to card sprite
+    public int effectID = -1;
+    public int abilityID = -1;
     public CardEffect cardEffect;       //can be null
     public CardAbility ability;         //can be null
 

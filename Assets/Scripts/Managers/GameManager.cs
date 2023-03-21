@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
         //test card
         CardObject card = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+        card.GetCardData(cm.cardDatabase[1]);
     }
 
     // Update is called once per frame
