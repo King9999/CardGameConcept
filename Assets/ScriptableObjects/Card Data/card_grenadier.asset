@@ -18,7 +18,7 @@ MonoBehaviour:
   power: 0
   health: 0
   cardArt: 1
-  effectID: -1
+  effectID: 0
   abilityID: -1
-  cardEffect: {fileID: 11400000, guid: 1208e3b28d782624c97c10dc08e99fee, type: 2}
+  cardEffect: {fileID: 0}
   ability: {fileID: 0}

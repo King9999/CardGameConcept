@@ -56,7 +56,7 @@ public class CardObject : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         //update card art
         GameManager gm = GameManager.instance;
         MeshRenderer r = gameObject.GetComponent<MeshRenderer>();
-        Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
+        //Debug.Log(r.material.GetTexture("_MainTex2").name);     //gives me name of the card face filename
         r.material.SetTexture("_MainTex2", gm.cm.cardFaceTextures[cardArtRef].faceTexture);
         Debug.Log(r.material.GetTexture("_MainTex2").name);
         Resources.UnloadUnusedAssets();

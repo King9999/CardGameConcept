@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d74b7b14fc20f574390338b030788828, type: 3}
   m_Name: effect_grenadier
   m_EditorClassIdentifier: 
-  effectID: 1
+  effectID: 0
   effectName: Grenade
   targetType: 0
   effectDetails: When Grenadier attacks an enemy, a random enemy takes half damage.

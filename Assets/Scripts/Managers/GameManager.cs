@@ -33,9 +33,30 @@ public class GameManager : MonoBehaviour
         //card setup
         cm.SetupCardDatabase();
 
-        //test card
-        CardObject card = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        card.GetCardData(cm.cardDatabase[1]);
+        //test cards
+        for (int i = 0; i < cm.cardDatabase.Count; i++)
+        {
+            CardObject card = Instantiate(cardPrefab, new Vector3(0, 0, 0), Quaternion.identity);
+            card.GetCardData(cm.cardDatabase[i]);
+
+            //look for available positions
+            int j = 0;
+            List<Vector3> pos = new List<Vector3>(cm.cardPositions.Keys);
+            bool posFound = false;
+            while(!posFound && j < pos.Count)
+            {
+                Debug.Log(pos[j]);
+                if (cm.cardPositions[pos[j]] == false)
+                {
+                    card.transform.position = pos[j];
+                    cm.cardPositions[pos[j]] = true;
+                    posFound = true;
+                }
+                j++;
+            }
+            
+        }
+        
     }
 
     // Update is called once per frame
